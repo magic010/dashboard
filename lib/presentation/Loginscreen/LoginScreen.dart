@@ -60,19 +60,25 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       const Text('Login Screen'),
                       const SizedBox(height: 20),
-                      TextFormField(
-                        controller: emailText,
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Email',
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.5,
+                        child: TextFormField(
+                          controller: emailText,
+                          decoration: const InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Email',
+                          ),
                         ),
                       ),
                       const SizedBox(height: 20),
-                      TextFormField(
-                        controller: passwordText,
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Password',
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.5,
+                        child: TextFormField(
+                          controller: passwordText,
+                          decoration: const InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Password',
+                          ),
                         ),
                       ),
                       const SizedBox(height: 20),
