@@ -33,19 +33,19 @@ class _UpcomingExamsState extends State<UpcomingExams> {
         child: BlocConsumer<QuizesCubit, QuizesState>(
           listener: (context, state) {
             if (state is QuizesFailure) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text(state.error),
-                ),
-              );
+              // ScaffoldMessenger.of(context).showSnackBar(
+              //   SnackBar(
+              //     content: Text(state.error),
+              //   ),
+              // );
             }
 
             if (state is QuizesSuccess) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text('Quizes Loaded'),
-                ),
-              );
+              // ScaffoldMessenger.of(context).showSnackBar(
+              //   const SnackBar(
+              //     content: Text('Quizes Loaded'),
+              //   ),
+              // );
             }
 
             if (state is QuizesLoading) {

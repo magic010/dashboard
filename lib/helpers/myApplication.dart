@@ -1,8 +1,5 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-
-import '../style/colors.dart';
 
 //   final String? hint;
 //   return InputDecoration(
@@ -33,17 +30,17 @@ import '../style/colors.dart';
 //   );
 // }
 
-void checkInternetWrapper() async {
-  final bool result = await MyApplication.checkInternet();
-  if (!result) {
-    MyApplication.showToast(
-        text: "No Internet connection | لا يوجد اتصال",
-        color: ToastColors.error);
-  } else {
-    //list of functions
+// void checkInternetWrapper() async {
+//   final bool result = await MyApplication.checkInternet();
+//   if (!result) {
+//     MyApplication.showToast(
+//         text: "No Internet connection | لا يوجد اتصال",
+//         color: ToastColors.error);
+//   } else {
+//     //list of functions
 
-  }
-}
+//   }
+// }
 
 class MyApplication {
   static Future<bool> checkInternet() async {
@@ -80,19 +77,19 @@ class MyApplication {
         .pushReplacement(MaterialPageRoute(builder: ((context) => page)));
   }
 
-  static showToast({
-    required String text,
-    required ToastColors color,
-  }) {
-    Fluttertoast.showToast(
-      msg: text,
-      toastLength: Toast.LENGTH_SHORT,
-      gravity: ToastGravity.BOTTOM,
-      backgroundColor: setToastColor(color),
-      textColor: Colors.white,
-      fontSize: 16,
-    );
-  }
+  // static showToast({
+  //   required String text,
+  //   required ToastColors color,
+  // }) {
+  //   Fluttertoast.showToast(
+  //     msg: text,
+  //     toastLength: Toast.LENGTH_SHORT,
+  //     gravity: ToastGravity.BOTTOM,
+  //     backgroundColor: setToastColor(color),
+  //     textColor: Colors.white,
+  //     fontSize: 16,
+  //   );
+  // }
 
   static InputDecoration textFieldInputDecoration(
       {String? hintText,
